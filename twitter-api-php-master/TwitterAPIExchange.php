@@ -304,8 +304,7 @@ class TwitterAPIExchange
 
         $feed = curl_init();
         
-        
-        curl_setopt_array($feed, CURLOPT_CAINFO, 'C:\Users\Clara\Desktop\Sergi\Certificado\cacert.pem');
+        curl_setopt_array($feed, $options);
         $json = curl_exec($feed);
 
         $this->httpStatusCode = curl_getinfo($feed, CURLINFO_HTTP_CODE);
